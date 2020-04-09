@@ -1,13 +1,19 @@
-// Clearfix
+/*-------------------------------*/
+/* CLEARFIX */
+/*-------------------------------*/
+
 %clearfix {
   &:after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
   }
 }
 
-// Center Content
+/*-------------------------------*/
+/* CENTER CONTENT */
+/*-------------------------------*/
+
 %center {
   display: flex;
   justify-content: center;

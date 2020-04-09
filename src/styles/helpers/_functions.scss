@@ -1,9 +1,13 @@
-// Calculate em values
+/*-------------------------------*/
+/* CALCULATE EM VALUSE */
+/*-------------------------------*/
 @function em($target, $context: $base__font-size) {
   @return ($target / $context) * 1em;
 }
 
-// Typography
+/*-------------------------------*/
+/* TYPOGRAPHY */
+/*-------------------------------*/
 
 @if variable-exists(font-url--google) {
   @import url($font-url--google);
