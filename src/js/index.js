@@ -5,4 +5,7 @@ console.log(model.bro("dude"));
 
 const test = e => {
   console.log("helo");
+  var one = "one";
 };
+
+test();
