@@ -1,30 +1,31 @@
-const path = require("path");
-const common = require("./webpack.common");
-const merge = require("webpack-merge");
-var HtmlWebpackPlugin = require("html-webpack-plugin");
+/* eslint-disable import/no-extraneous-dependencies */
+const path = require('path');
+const merge = require('webpack-merge');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const common = require('./webpack.common');
 
 module.exports = merge(common, {
-  devtool: "source-map",
-  mode: "development",
+  devtool: 'source-map',
+  mode: 'development',
   output: {
-    filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist")
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html"
-    })
+      template: './src/index.html',
+    }),
   ],
   module: {
     rules: [
       {
         test: /\.scss$/,
         use: [
-          "style-loader", //3. Inject styles into DOM
-          "css-loader", //2. Turns css into commonjs
-          "sass-loader" //1. Turns sass into css
-        ]
-      }
-    ]
-  }
+          'style-loader', // 3. Inject styles into DOM
+          'css-loader', // 2. Turns css into commonjs
+          'sass-loader', // 1. Turns sass into css
+        ],
+      },
+    ],
+  },
 });
