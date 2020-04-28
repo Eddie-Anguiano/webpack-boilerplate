@@ -10,7 +10,7 @@
   $bg-repeat: no-repeat,
   $bg-size: cover
 ) {
-  background-image: url("#{$img-path}/#{$img-name}");
+  background-image: url('#{$img-path}/#{$img-name}');
   height: $h;
   width: $w;
   display: $display;
@@ -25,16 +25,16 @@
 
 // Mobile first
 @mixin m1-mq($break) {
-  @if $break == "small" {
-    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+  @if $break == 'small' {
+    @media (min-width: $breakpoint--sm) and (max-width: $breakpoint--md) {
       @content;
     }
-  } @else if $break == "medium" {
-    @media (min-width: $breakpoint-md + 1) {
+  } @else if $break == 'medium' {
+    @media (min-width: $breakpoint--md + 1) {
       @content;
     }
-  } @else if $break == "large" {
-    @media (min-width: $breakpoint-lg) {
+  } @else if $break == 'large' {
+    @media (min-width: $breakpoint--lg) {
       @content;
     }
   } @else {
@@ -44,16 +44,16 @@
 
 // Desktop first
 @mixin d1-mq($break) {
-  @if $break == "large" {
-    @media (max-width: $breakpoint-lg) and (min-width: $breakpoint-md) {
+  @if $break == 'large' {
+    @media (max-width: $breakpoint--lg) and (min-width: $breakpoint--md) {
       @content;
     }
-  } @else if $break == "large-keep" {
-    @media (max-width: $breakpoint-lg) {
+  } @else if $break == 'large-keep' {
+    @media (max-width: $breakpoint--lg) {
       @content;
     }
-  } @else if $break == "medium" {
-    @media (max-width: $breakpoint-md) {
+  } @else if $break == 'medium' {
+    @media (max-width: $breakpoint--md) {
       @content;
     }
   }
